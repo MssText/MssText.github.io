@@ -1,6 +1,7 @@
 {
   "name": "mss-blog",
   "version": "1.0.0",
+  "homepage": "https://MssText.github.io/",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
