@@ -8,7 +8,7 @@ module.exports = {
 
   title: "松松的一尺三分地",
   description: 'web前端技术博客,专注于前端前沿技术领域',
-  base: '/mss-blog/', // 格式：'/<仓库名>/'， 默认'/'
+  // base: '/mss-blog/', // 格式：'/<仓库名>/'， 默认'/'
   markdown: {
     lineNumbers: true, // 代码行号
   },
