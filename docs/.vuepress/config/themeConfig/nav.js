@@ -19,6 +19,12 @@ module.exports = [
           { text: 'Vue', link: '/pages/c4cac0/' },
           { text: 'React', link: '/pages/f5bc8f/' },
         ],
+      },
+      {
+        text: '学习笔记',
+        items: [
+          { text: '《微前端》学习笔记', link: '/note/javascript/' }
+        ],
       }
     ],
   },
