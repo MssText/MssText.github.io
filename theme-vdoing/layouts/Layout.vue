@@ -308,7 +308,6 @@ export default {
       }
     },
     toggleThemeMode (key) {
-      console.log('拿到的key的值为：', key)
       if (key === 'auto') {
         this._autoMode()
       } else {

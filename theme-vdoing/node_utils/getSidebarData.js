@@ -34,7 +34,6 @@ function createSidebarData (sourceDir, collapsable) {
     }
   })
 
-  log(chalk.red("侧边栏数据为：", JSON.stringify(sidebarData)))
   return sidebarData
 }
 

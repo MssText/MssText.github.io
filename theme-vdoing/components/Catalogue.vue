@@ -101,8 +101,6 @@ export default {
   methods: {
     getPageData () {
       const pageComponent = this.$frontmatter.pageComponent
-
-      console.log('当前挂载的组件是：', pageComponent);
       if (pageComponent && pageComponent.data) {
         this.pageData = {
           ...pageComponent.data,
