@@ -11,19 +11,19 @@ cd docs/.vuepress/dist
 
 # deploy to github
 # echo 'MssText.github.io.com' > CNAME
-if [ -z "$GITHUB_TOKEN" ]; then
+# if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
-  githubUrl=git@github.com:MssText/MssText.github.io.git
-else
-  msg='来自github actions的自动部署'
-  githubUrl=https://MssText:${GITHUB_TOKEN}@github.com/MssText/MssText.github.io.git
-  git config --global user.name "masongsong"
-  git config --global user.email "2698745548@qq.com"
-fi
-git init
-git add -A
-git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 推送到github
+#   githubUrl=git@github.com:MssText/MssText.github.io.git
+# else
+#   msg='来自github actions的自动部署'
+#   githubUrl=https://MssText:${GITHUB_TOKEN}@github.com/MssText/MssText.github.io.git
+#   git config --global user.name "masongsong"
+#   git config --global user.email "2698745548@qq.com"
+# fi
+# git init
+# git add -A
+# git commit -m "${msg}"
+# git push -f $githubUrl master:gh-pages # 推送到github
 
 # deploy to coding
 # echo 'www.MssText.github.io.com' > CNAME  # 自定义域名
