@@ -33,11 +33,11 @@ if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_T
   codingUrl=git@e.coding.net:mss-blog/mss-blog/mss-blog.git
 else
   codingUrl=https://mss-blog:${CODING_TOKEN}@e.coding.net/mss-blog/mss-blog.git
-else
 fi
 git add -A
 git commit -m "${msg}"
 git push -f $codingUrl master # 推送到coding
+
 
 cd - # 退回开始所在目录
 rm -rf docs/.vuepress/dist
