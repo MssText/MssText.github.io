@@ -30,9 +30,9 @@ cd docs/.vuepress/dist
 # echo 'google.com, pub-7828333725993554, DIRECT, f08c47fec0942fa0' > ads.txt # 谷歌广告相关文件
 
 if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于gitee仓库`Settings/Secrets`设置的私密环境变量
-  codingUrl=git@e.coding.net:mss-blog/mss-blog/mss-blog.git
+  codingUrl=git@e.coding.net:mss-blog/mss-blog/blog.git
 else
-  codingUrl=https://mss-blog:${CODING_TOKEN}@e.coding.net/mss-blog/mss-blog.git
+  codingUrl=https://mss-blog:${CODING_TOKEN}@e.coding.net/mss-blog/blog.git
 fi
 git add -A
 git commit -m "${msg}"
