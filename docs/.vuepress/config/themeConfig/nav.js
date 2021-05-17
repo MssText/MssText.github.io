@@ -9,7 +9,7 @@ module.exports = [
       {
         text: '原生能力',
         items: [
-          { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
+          { text: 'JavaScript', link: '/pages/98424b/' },
           { text: 'Node', link: '/pages/04a264/' }
         ],
       },
