@@ -37,7 +37,7 @@ module.exports = [
     ],
   },
   {
-    text: '书房杂货',
+    text: '书房百味',
     link: '/read/',
     items: [
       { text: '最近在读', link: '/pages/511ed7/' },
