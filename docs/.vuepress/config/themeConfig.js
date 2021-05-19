@@ -5,6 +5,7 @@ const htmlModules = require('./themeConfig/htmlModules.js');
 // 主题配置
 module.exports = {
   nav,
+  smoothScroll: true,
   sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
   logo: '/img/logo.png', // 导航栏logo
   repo: 'https://github.com/MssText/MssText.github.io', // 导航栏右侧生成Github链接
