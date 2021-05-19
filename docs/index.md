@@ -2,7 +2,7 @@
 home: true
 heroText: 你好，陌生人，欢迎来到我的世界
 tagline: 于千万人之中遇到你所要遇到的人，于千万年之中，时间的无涯的荒野中，没有早一步，也没有晚一步，刚巧赶上了
-bannerBg: '/img/bg.jpeg' # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
+bannerBg: 'https://images.qipeilong.cn/promotion/20210519/d52c83c66ffc767ee410d610999a9d8d_w1920_h1080.jpg' # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 
 # features: # 可选的
 #   - title: 前端
