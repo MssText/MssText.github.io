@@ -88,6 +88,15 @@
             :key="index"
           >{{item + ' '}}</router-link>
         </div>
+        <div
+          v-if="$themeConfig.isShowReadTime && readingTimeMsg"
+          class="date iconfont icon-yuedu"
+          title="阅读时间"
+        >
+          <a href="javascript:;">
+            {{'阅读时间：' + readingTimeMsg }}
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -97,7 +106,8 @@
 export default {
   data () {
     return {
-      articleInfo: {}
+      articleInfo: {},
+      readingTimeMsg: ''
     }
   },
   created () {
@@ -111,8 +121,13 @@ export default {
   methods: {
     getPageInfo () {
       const pageInfo = this.$page
+
+      const { minutes = '' } = pageInfo.readingTime
       const { relativePath } = pageInfo
       const { sidebar } = this.$themeConfig
+
+      // 阅读时间
+      this.readingTimeMsg = minutes < 1 ? '小于1分钟' : `大约${minutes}分钟`
 
       // 分类采用解析文件夹地址名称的方式
       const relativePathArr = relativePath.split('/')

@@ -1,6 +1,8 @@
 // 插件配置
 module.exports = [
   // 本地插件
+  [require('../plugins/read')], // 阅读时间插件
+
   [require('../plugins/love-me'), { // 鼠标点击爱心特效
     color: '#fb7299', // 爱心颜色，默认随机色
     excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
@@ -106,5 +108,5 @@ module.exports = [
         return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
       },
     },
-  ],
+  ]
 ]
