@@ -17,6 +17,9 @@ module.exports = {
 
   isShowReadTime: true, // 是否展示阅读时间
   // wordsPerMinute: 100, // 每分钟阅读的字数 默认是 300
+  isShowReadCount: true, // 是否开启阅读量统计
+
+
   //*** 以下配置是Vdoing主题改动和新增的配置 ***//
 
   // category: false, // 是否打开分类功能，默认true。 如打开，会做的事情有：1. 自动生成的frontmatter包含分类字段 2.页面中显示与分类相关的信息和模块 3.自动生成分类页面（在@pages文件夹）。如关闭，则反之。

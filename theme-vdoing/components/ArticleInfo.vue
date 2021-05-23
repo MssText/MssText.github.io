@@ -90,12 +90,16 @@
         </div>
         <div
           v-if="$themeConfig.isShowReadTime && readingTimeMsg"
-          class="date iconfont icon-yuedu"
-          title="阅读时间"
-        >
-          <a href="javascript:;">
-            {{'阅读时间：' + readingTimeMsg }}
-          </a>
+          class="iconfont icon-yuedu">
+          <span>{{readingTimeMsg}}</span>
+        </div>
+        <div
+          v-if="$themeConfig.isShowReadCount"
+          :id="$page.path"
+          class="leancloud_visitors iconfont icon-rijianmoshi"
+          :data-flag-title="$page.title">
+          <span class="post-meta-item-text">阅读量</span>
+          <span class="leancloud-visitors-count"></span>
         </div>
       </div>
     </div>
@@ -107,18 +111,47 @@ export default {
   data () {
     return {
       articleInfo: {},
-      readingTimeMsg: ''
+      readingTimeMsg: '',
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.initValine();
+    }, 500);
   },
   created () {
     this.articleInfo = this.getPageInfo()
   },
   watch: {
-    '$route.path' () {
-      this.articleInfo = this.getPageInfo()
+    $route (to, from) {
+      if (from.path !== to.path) {
+        this.articleInfo = this.getPageInfo()
+        this.$nextTick(() => {
+          this.initValine()
+        })
+      }
     }
   },
   methods: {
+    initValine () {
+      import('valine').then(valineConstructor => {
+        const valine = new valineConstructor.default();
+        valine.init({
+          el: '#valine-vuepress-comment',
+          appId: 'FBPq14pAqbA2njMQCgq0Qtn9-MdYXbMMI',
+          appKey: 'AeKIQrwR7e1lljXJ4yAnv6yH',
+          path: this.$route.path,
+          visitor: true,
+        })
+      })
+        // new Valine({
+        //   el: '#valine-vuepress-comment',
+        //   appId: 'FBPq14pAqbA2njMQCgq0Qtn9-MdYXbMMI',
+        //   appKey: 'AeKIQrwR7e1lljXJ4yAnv6yH',
+        //   path: this.$route.path,
+        //   visitor: true,
+        // })
+    },
     getPageInfo () {
       const pageInfo = this.$page
 
@@ -161,7 +194,6 @@ export default {
 
 <style lang='stylus' scoped>
 @require '../styles/wrapper.styl'
-
 .articleInfo-wrap
   @extend $wrapper
   position relative

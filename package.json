@@ -27,6 +27,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "valine": "^1.4.14",
     "vuepress-plugin-comment": "^0.7.3"
   }
 }
