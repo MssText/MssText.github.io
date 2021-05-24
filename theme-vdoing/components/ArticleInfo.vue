@@ -90,16 +90,16 @@
         </div>
         <div
           v-if="$themeConfig.isShowReadTime && readingTimeMsg"
-          class="iconfont icon-yuedu">
-          <span>{{readingTimeMsg}}</span>
+          class="date iconfont icon-yuedu">
+          <span>{{ '阅读时间：' + readingTimeMsg}}</span>
         </div>
         <div
           v-if="$themeConfig.isShowReadCount"
           :id="$page.path"
-          class="leancloud_visitors iconfont icon-rijianmoshi"
+          class="leancloud_visitors date iconfont icon-eye"
           :data-flag-title="$page.title">
-          <span class="post-meta-item-text">阅读量</span>
-          <span class="leancloud-visitors-count"></span>
+          <span class="post-meta-item-text">阅读量：</span>
+          <span class="leancloud-visitors-count">0</span>
         </div>
       </div>
     </div>
@@ -144,13 +144,6 @@ export default {
           visitor: true,
         })
       })
-        // new Valine({
-        //   el: '#valine-vuepress-comment',
-        //   appId: 'FBPq14pAqbA2njMQCgq0Qtn9-MdYXbMMI',
-        //   appKey: 'AeKIQrwR7e1lljXJ4yAnv6yH',
-        //   path: this.$route.path,
-        //   visitor: true,
-        // })
     },
     getPageInfo () {
       const pageInfo = this.$page
@@ -246,6 +239,8 @@ export default {
           color #888
           &:hover
             text-decoration none
+        span 
+          font-weight 500
         a.beLink
           &:hover
             color $accentColor
