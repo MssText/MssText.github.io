@@ -153,7 +153,7 @@ export default {
       const { sidebar } = this.$themeConfig
 
       // 阅读时间
-      this.readingTimeMsg = minutes < 1 ? '小于1分钟' : `大约${minutes}分钟`
+      this.readingTimeMsg = minutes <= 1 ? '1分钟' : `${minutes}分钟`
 
       // 分类采用解析文件夹地址名称的方式
       const relativePathArr = relativePath.split('/')
