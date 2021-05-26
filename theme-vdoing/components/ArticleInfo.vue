@@ -91,14 +91,14 @@
         <div
           v-if="$themeConfig.isShowReadTime && readingTimeMsg"
           class="date iconfont icon-yuedu">
-          <span>{{ '阅读时间：' + readingTimeMsg}}</span>
+          <span>{{ '时间 ' + readingTimeMsg}}</span>
         </div>
         <div
           v-if="$themeConfig.isShowReadCount"
           :id="$page.path"
           class="leancloud_visitors date iconfont icon-eye"
           :data-flag-title="$page.title">
-          <span class="post-meta-item-text">阅读量：</span>
+          <span class="post-meta-item-text">阅读 </span>
           <span class="leancloud-visitors-count">0</span>
         </div>
       </div>

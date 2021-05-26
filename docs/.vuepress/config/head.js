@@ -2,6 +2,7 @@
 module.exports = [
   // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   ['link', { rel: 'icon', href: '/img/logo.png' }], //favicons，资源放在public文件夹
+  ['link', { rel: 'stylesheet', href: 'https://unpkg.com/mssui@0.1.13/lib/theme-chalk/index.css' }],
   [
     'meta',
     {
@@ -19,6 +20,6 @@ module.exports = [
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
     },
   ], // 网站关联Google AdSense 与 html格式广告支持
-  ['script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' }],
-  ['script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' }]
+  ['script', { src: 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js' }],
+  ['script', { src: 'https://unpkg.com/mssui@0.1.13/lib/index.js' }]
 ]
