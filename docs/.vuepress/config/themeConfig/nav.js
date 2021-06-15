@@ -17,7 +17,7 @@ module.exports = [
         text: '框架能力',
         items: [
           { text: 'Vue', link: '/pages/235d3a/' },
-          { text: 'React', link: '/pages/f5bc8f/' },
+          { text: 'React', link: '/pages/58cdc3/' },
         ],
       },
       {
