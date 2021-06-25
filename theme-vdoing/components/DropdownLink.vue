@@ -162,14 +162,14 @@ export default {
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
         &:hover
-          color $accentColor
+          color var(--accentColor)
         &.router-link-active
-          color $accentColor
+          color var(--accentColor)
           &::after
             content ''
             width 0
             height 0
-            border-left 5px solid $accentColor
+            border-left 5px solid var(--accentColor)
             border-top 3px solid transparent
             border-bottom 3px solid transparent
             position absolute
@@ -187,7 +187,7 @@ export default {
       font-weight 600
       font-size inherit
       &:hover
-        color $accentColor
+        color var(--accentColor)
       .link-title
         display none
       .title
@@ -241,5 +241,6 @@ export default {
   .nav-item .dropdown-title a
     &:hover, &.router-link-active
       margin-bottom -2px
-      border-bottom 2px solid lighten($accentColor, 8%)
+      // border-bottom 2px solid lighten($accentColor, 8%)
+      border-bottom 2px solid var(--accentColor)
 </style>

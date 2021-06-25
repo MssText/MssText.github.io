@@ -124,7 +124,7 @@ export default {
     line-height 1.4rem
     color inherit
     &:hover, &.router-link-active
-      color $accentColor
+      color var(--accentColor)
   .nav-item
     position relative
     display inline-block
@@ -150,5 +150,6 @@ export default {
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
       margin-bottom -2px
-      border-bottom 2px solid lighten($accentColor, 8%)
+      // border-bottom 2px solid lighten($accentColor, 8%)
+      border-bottom 2px solid var(--accentColor)
 </style>

@@ -39,6 +39,34 @@
         </ul>
       </transition>
     </div>
+    <div
+        title="选择主题色"
+        class="button blur theme-mode-but iconfont icon-qiehuan"
+        @mouseenter="showThemeColorBox = true"
+        @mouseleave="showThemeColorBox = false"
+        @click="showThemeColorBox = true"
+    >
+      <transition name="mode">
+        <ul
+            class="select-box"
+            ref="modeBox"
+            v-show="showThemeColorBox"
+            @click.stop
+            @touchstart.stop
+        >
+          <li
+              v-for="item in themeColorList"
+              :key="item.KEY"
+              class="iconfont"
+              :class="[{active: item.KEY === currentThemeColor}]"
+              @click="toggleThemeColor(item.KEY)"
+          >
+            <sub :style="{ backgroundColor: item.color }" class="theme-select-block"></sub>
+            <span>{{item.name}}</span>
+          </li>
+        </ul>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -56,6 +84,8 @@ export default {
       commentTop: null,
       currentMode: null,
       showModeBox: false,
+      currentThemeColor: null,
+      showThemeColorBox: false,
       modeList: [
         {
           name: '跟随系统',
@@ -76,6 +106,32 @@ export default {
           name: '阅读模式',
           icon: 'icon-yuedu',
           KEY: 'read'
+        }
+      ],
+      themeColorList: [
+        {
+          name: '生命绿',
+          icon: 'icon-zidong',
+          KEY: 'green',
+          color: '#3eaf7c'
+        },
+        {
+          name: '收获黄',
+          icon: 'icon-rijianmoshi',
+          KEY: 'yellow',
+          color: '#D59C12'
+        },
+        {
+          name: '天空蓝',
+          icon: 'icon-yejianmoshi',
+          KEY: 'blue',
+          color: '#3498DB'
+        },
+        {
+          name: '激情红',
+          icon: 'icon-yuedu',
+          KEY: 'red',
+          color: '#E74C3C'
         }
       ],
       _scrollTimer: null,
@@ -123,7 +179,7 @@ export default {
         setTimeout(() => {
           button.classList.remove('hover')
         }, 150)
-      }) 
+      })
     }
 
   },
@@ -133,6 +189,12 @@ export default {
     }
   },
   methods: {
+    toggleThemeColor (key) {
+      // const appId = document.querySelector('#app')
+      this.currentThemeColor = key
+      this.$emit('toggle-theme-color', key)
+      // appId.className = 'theme-mode-' + key
+    },
     toggleMode (key) {
       this.currentMode = key
       this.$emit('toggle-theme-mode', key)
@@ -220,14 +282,14 @@ export default {
     transition all 0.5s
     background var(--blurBg)
     &.hover
-      background $accentColor
-      box-shadow 0 0 15px $accentColor
+      background var(--accentColor)
+      box-shadow 0 0 15px var(--accentColor)
       &:before
         color #fff
     @media (any-hover hover)
       &:hover
-        background $accentColor
-        box-shadow 0 0 15px $accentColor
+        background var(--accentColor)
+        box-shadow 0 0 15px var(--accentColor)
         &:before
           color #fff
     .select-box
@@ -246,10 +308,17 @@ export default {
         line-height 2rem
         font-size 0.95rem
         &:hover
-          color $accentColor
+          color var(--accentColor)
         &.active
           background-color rgba(150, 150, 150, 0.2)
-          color $accentColor
+          color var(--accentColor)
+      .theme-select-block
+        vertical-align: middle;
+        display:inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 2px;
+        border-radius: 2px;
 .mode-enter-active, .mode-leave-active
   transition all 0.3s
 .mode-enter, .mode-leave-to

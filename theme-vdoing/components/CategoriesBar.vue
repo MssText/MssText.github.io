@@ -81,11 +81,11 @@ export default {
       @media (max-width $MQMobile)
         font-weight 400
       &.more
-        // color $accentColor
+        // color var(--accentColor)
       &:not(.active):hover
-        color $accentColor
+        color var(--accentColor)
         background #f8f8f8
-        border-color $accentColor
+        border-color var(--accentColor)
         span
           opacity 0.8
       span
@@ -102,7 +102,7 @@ export default {
         opacity 0.6
         transition opacity 0.3s
       &.active
-        background $accentColor
+        background var(--accentColor)
         color var(--mainBg)
         padding-left 0.8rem
         border-radius 1px

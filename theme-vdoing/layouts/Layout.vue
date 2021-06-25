@@ -2,7 +2,7 @@
   <div
     class="theme-container"
     :class="pageClasses"
-    @touchstart="onTouchStart" 
+    @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
     <Navbar
@@ -80,6 +80,7 @@
     <Buttons
       ref="buttons"
       @toggle-theme-mode="toggleThemeMode"
+      @toggle-theme-color="toggleThemeColor"
     />
 
     <BodyBgImg v-if="$themeConfig.bodyBgImg" />
@@ -128,6 +129,7 @@ export default {
       isSidebarOpen: true,
       showSidebar: false,
       themeMode: 'light',
+      themeColor: 'green',
       showWindowLB: true,
       showWindowRB: true
     }
@@ -221,12 +223,18 @@ export default {
   beforeMount () {
     this.isSidebarOpenOfclientWidth()
     const mode = storage.get('mode') // 不放在created是因为vuepress不能在created访问浏览器api，如window
+    const themeColor = storage.get('themeColor')
+
+    // 切换主题
     if (!mode || mode === 'auto') { // 当未切换过模式，或模式处于'跟随系统'时
       this._autoMode()
     } else {
       this.themeMode = mode
     }
     this.setBodyClass()
+
+    // 切换主题色
+    this.themeColor = themeColor
 
     // 引入图标库
     const social = this.$themeConfig.social
@@ -276,6 +284,9 @@ export default {
     },
     themeMode () {
       this.setBodyClass()
+    },
+    themeColor () {
+      this.setAppClass()
     }
   },
   methods: {
@@ -285,6 +296,10 @@ export default {
     },
     setBodyClass () {
       document.body.className = 'theme-mode-' + this.themeMode
+    },
+    setAppClass () {
+      const appId = document.querySelector('#app')
+      appId.className = 'theme-mode-' + this.themeColor
     },
     getScrollTop () {
       return window.pageYOffset
@@ -314,6 +329,10 @@ export default {
         this.themeMode = key
       }
       storage.set('mode', key)
+    },
+    toggleThemeColor (key) {
+      this.themeColor = key
+      storage.set('themeColor', key)
     },
 
     // side swipe

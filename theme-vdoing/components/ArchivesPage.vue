@@ -127,7 +127,7 @@ export default {
         line-height 1.2rem
         &:hover
           padding-left 2.5rem
-          color $accentColor
+          color var(--accentColor)
           background #f9f9f9
         @media (max-width $contentWidth + 80)
           padding 0.5rem 1rem

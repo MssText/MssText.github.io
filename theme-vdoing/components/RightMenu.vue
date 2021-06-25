@@ -69,9 +69,9 @@ export default {
       &.level3
         padding-left 28px
       &.active
-        border-color $accentColor
+        border-color var(--accentColor)
         a
-          color $accentColor
+          color var(--accentColor)
           opacity 1
       a
         color var(--textColor)
@@ -79,7 +79,7 @@ export default {
         display block
         width ($rightMenuWidth - 30px)
         &:hover
-          color $accentColor
+          color var(--accentColor)
 .have-body-img
   .right-menu-wrapper
     .right-menu-margin
@@ -89,7 +89,7 @@ export default {
       .right-menu-item
         border-color transparent
         &.active
-          border-left 0.2rem solid $accentColor
+          border-left 0.2rem solid var(--accentColor)
         &:hover
-          border-left 0.2rem solid $accentColor
+          border-left 0.2rem solid var(--accentColor)
 </style>

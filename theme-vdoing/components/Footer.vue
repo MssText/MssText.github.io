@@ -60,7 +60,7 @@ export default {
   a
     color inherit
     &:hover
-      color $accentColor
+      color var(--accentColor)
 @media (min-width ($MQMobile + 1px))
   .sidebar-open .footer
     width auto

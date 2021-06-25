@@ -31,5 +31,5 @@ export default {
   padding 1.5rem
   span
     font-size 6rem
-    color $accentColor
+    color var(--accentColor)
 </style>

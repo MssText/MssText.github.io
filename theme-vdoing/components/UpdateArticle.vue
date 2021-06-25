@@ -140,7 +140,7 @@ export default {
           &:hover
             text-decoration underline
           &.more
-            color $accentColor
+            color var(--accentColor)
         span
           width 50px
           margin-right 15px

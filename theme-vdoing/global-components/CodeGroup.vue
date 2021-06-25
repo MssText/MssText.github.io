@@ -92,8 +92,8 @@ export default {
   font-weight 600
   opacity 0.85
 .theme-code-group__nav-tab-active
-  border-bottom $accentColor 1px solid
+  border-bottom var(--accentColor) 1px solid
   opacity 1
 .pre-blank
-  color $accentColor
+  color var(--accentColor)
 </style>

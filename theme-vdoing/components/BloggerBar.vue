@@ -71,7 +71,7 @@ export default {
       text-align center
       opacity 0.8
       &:hover
-        color $accentColor
+        color var(--accentColor)
   .blogger
     padding 0.3rem 0.95rem 0 0.95rem
     .name

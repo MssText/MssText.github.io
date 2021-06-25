@@ -219,7 +219,7 @@ export default {
           &:before
             font-size 0.92rem
           &:hover
-            color $accentColor
+            color var(--accentColor)
         .icon-home
           text-decoration none
     .info
@@ -243,6 +243,6 @@ export default {
           font-weight 500
         a.beLink
           &:hover
-            color $accentColor
+            color var(--accentColor)
             text-decoration underline
 </style>
