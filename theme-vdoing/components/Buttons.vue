@@ -190,10 +190,8 @@ export default {
   },
   methods: {
     toggleThemeColor (key) {
-      // const appId = document.querySelector('#app')
       this.currentThemeColor = key
       this.$emit('toggle-theme-color', key)
-      // appId.className = 'theme-mode-' + key
     },
     toggleMode (key) {
       this.currentMode = key

@@ -234,7 +234,8 @@ export default {
     this.setBodyClass()
 
     // 切换主题色
-    this.themeColor = themeColor
+    this.themeColor = themeColor || 'green'
+    this.setAppClass()
 
     // 引入图标库
     const social = this.$themeConfig.social
