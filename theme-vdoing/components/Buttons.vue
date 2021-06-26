@@ -111,27 +111,28 @@ export default {
       themeColorList: [
         {
           name: '生命绿',
-          icon: 'icon-zidong',
           KEY: 'green',
           color: '#3eaf7c'
         },
         {
           name: '收获黄',
-          icon: 'icon-rijianmoshi',
           KEY: 'yellow',
           color: '#D59C12'
         },
         {
           name: '天空蓝',
-          icon: 'icon-yejianmoshi',
           KEY: 'blue',
           color: '#3498DB'
         },
         {
           name: '激情红',
-          icon: 'icon-yuedu',
           KEY: 'red',
           color: '#E74C3C'
+        },
+        {
+          name: '高贵紫',
+          KEY: 'purple',
+          color: '#8e44ad'
         }
       ],
       _scrollTimer: null,

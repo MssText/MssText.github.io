@@ -381,11 +381,11 @@ export default {
           transition background-color 0.1s ease
           box-sizing border-box
           // border-bottom 1px solid darken($accentColor, 10%)
-          border-bottom 1px solid var(--accentColor)
+          border-bottom 1px solid var(--accent-color-l10)
           color #fff
           &:hover
             // background-color lighten($accentColor, 10%)
-            background-color var(--accentColor)
+            background-color var(--accent-color-l10)
       // pc端features
       .features
         padding 2rem 0

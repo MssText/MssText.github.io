@@ -66,8 +66,14 @@ a,input,button
 body .search-box
   input
     background-color transparent
-    color var(--textColor)
+    color var(--accentColor)
     border 1px solid var(--borderColor, #ccc)
+    &:focus
+      border-color var(--accentColor)
+  .suggestion
+    &.focused
+      a
+        color var(--accentColor)
     @media (max-width: $MQNarrow)
        border-color transparent
 
