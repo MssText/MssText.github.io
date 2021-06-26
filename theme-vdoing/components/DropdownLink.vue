@@ -136,12 +136,17 @@ export default {
     color var(--textColor)
     &:hover
       border-color transparent
+      .arrow
+        transform: rotate(-180deg)
+        transition: all .3s
     .arrow
       vertical-align middle
       margin-top -1px
       margin-left 0.4rem
+
   .nav-dropdown
-    .dropdown-item
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15)
+  .dropdown-item
       color inherit
       line-height 1.7rem
       h4
@@ -188,12 +193,15 @@ export default {
       font-size inherit
       &:hover
         color var(--accentColor)
+        .arrow
+          transform: none
       .link-title
         display none
       .title
         display inline-block !important
     .nav-dropdown
       transition height 0.1s ease-out
+      box-shadow: 2px 2px 10px transparent
       overflow hidden
       .dropdown-item
         h4
@@ -232,7 +240,7 @@ export default {
       right 0
       background-color var(--mainBg)
       padding 0.6rem 0
-      border 1px solid var(--borderColor)
+      //border 1px solid var(--borderColor)
       border-bottom-color var(--borderColor)
       text-align left
       border-radius 0.25rem
