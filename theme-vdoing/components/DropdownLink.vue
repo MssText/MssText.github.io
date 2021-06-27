@@ -136,9 +136,6 @@ export default {
     color var(--textColor)
     &:hover
       border-color transparent
-      .arrow
-        transform: rotate(-180deg)
-        transition: all .3s
     .arrow
       vertical-align middle
       margin-top -1px
@@ -193,8 +190,6 @@ export default {
       font-size inherit
       &:hover
         color var(--accentColor)
-        .arrow
-          transform: none
       .link-title
         display none
       .title
@@ -228,6 +223,11 @@ export default {
       border-right 4px solid transparent
       border-top 6px solid $arrowBgColor
       border-bottom 0
+    .dropdown-title
+      &:hover
+        .arrow
+          transform: rotate(-180deg)
+          transition: all .3s
     .nav-dropdown
       display none
       // Avoid height shaked by clicking
