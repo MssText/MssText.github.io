@@ -223,11 +223,10 @@ export default {
       border-right 4px solid transparent
       border-top 6px solid $arrowBgColor
       border-bottom 0
-    .dropdown-title
-      &:hover
-        .arrow
-          transform: rotate(-180deg)
-          transition: all .3s
+    &:hover
+      .arrow
+        transform: rotate(-180deg)
+        transition: all .3s
     .nav-dropdown
       display none
       // Avoid height shaked by clicking
