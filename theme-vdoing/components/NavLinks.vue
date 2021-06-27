@@ -1,5 +1,6 @@
 <template>
   <nav
+    :key="key"
     class="nav-links"
     v-if="userLinks.length || repoLink"
   >
@@ -40,6 +41,17 @@ import NavLink from '@theme/components/NavLink.vue'
 
 export default {
   components: { NavLink, DropdownLink },
+  data () {
+    return {
+      key: ''
+    }
+  },
+
+  watch: {
+    $route () {
+      this.key = new Date().getTime()
+    }
+  },
 
   computed: {
     userNav () {
