@@ -302,6 +302,9 @@ export default {
       width 120px
       border-radius 6px
       box-shadow 0 0 15px rgba(255, 255, 255, 0.2)
+      .icon-zidong:before, .icon-rijianmoshi:before,
+      .icon-yejianmoshi:before, .icon-yuedu:before
+        padding-right 8px
       li
         list-style none
         line-height 2rem

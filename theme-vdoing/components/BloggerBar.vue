@@ -7,6 +7,10 @@
         title="我好看吗"
       />
     </div>
+    <div class="blogger">
+      <span class="name">{{blogger.name}}</span>
+      <span class="slogan">{{blogger.slogan}}</span>
+    </div>
     <div
       class="icons"
       v-if="social && social.icons && social.icons.length"
@@ -20,10 +24,6 @@
         :style="{width: 100/social.icons.length + '%'}"
         target="_blank"
       />
-    </div>
-    <div class="blogger">
-      <span class="name">{{blogger.name}}</span>
-      <span class="slogan">{{blogger.slogan}}</span>
     </div>
   </aside>
 </template>

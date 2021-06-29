@@ -26,17 +26,17 @@ git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github
 
 # deploy to coding
-# echo 'www.MssText.github.io.com' > CNAME  # 自定义域名
+ echo 'masongsong.cn' > CNAME  # 自定义域名
 # echo 'google.com, pub-7828333725993554, DIRECT, f08c47fec0942fa0' > ads.txt # 谷歌广告相关文件
 
-# if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于gitee仓库`Settings/Secrets`设置的私密环境变量
-#   codingUrl=git@e.coding.net:mss-blog/mss-blog/blog.git
-# else
-#   codingUrl=https://mss-blog:${CODING_TOKEN}@e.coding.net/mss-blog/blog.git
-# fi
-# git add -A
-# git commit -m "${msg}"
-# git push -f $codingUrl master # 推送到coding
+ if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于gitee仓库`Settings/Secrets`设置的私密环境变量
+   codingUrl=git@e.coding.net:mss-blog/mss-blog/blog.git
+ else
+   codingUrl=https://mss-blog:${CODING_TOKEN}@e.coding.net/mss-blog/blog.git
+ fi
+ git add -A
+ git commit -m "${msg}"
+ git push -f $codingUrl master # 推送到coding
 
 
 cd - # 退回开始所在目录

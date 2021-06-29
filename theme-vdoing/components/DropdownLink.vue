@@ -114,6 +114,7 @@ export default {
 
   watch: {
     $route () {
+      console.log("触发这个函数")
       this.open = false
     }
   }
