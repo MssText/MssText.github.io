@@ -296,11 +296,21 @@ export default {
       return htmlModules ? htmlModules[module] : ''
     },
     setBodyClass () {
-      document.body.className = 'theme-mode-' + this.themeMode
+      const mode = 'theme-mode-' + this.themeMode
+      if (document.body.classList[0].includes('theme-mode')) {
+        document.body.classList.replace(document.body.classList[0], mode)
+      }
     },
     setAppClass () {
-      const appId = document.querySelector('#app')
-      appId.className = 'theme-mode-' + this.themeColor
+      const color = 'theme-color-' + this.themeColor
+      if (document.body.classList[1]?.includes('theme-color')) {
+        document.body.classList.replace(document.body.classList[1], color)
+      } else {
+        document.body.classList.add('theme-color-green')
+      }
+      // const appId = document.querySelector('#app')
+      // appId.className = 'theme-mode-' + this.themeColor
+      // document.body.classList.replace('theme-mode-' + this.themeColor)
     },
     getScrollTop () {
       return window.pageYOffset
