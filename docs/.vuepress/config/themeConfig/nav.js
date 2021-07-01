@@ -46,5 +46,6 @@ module.exports = [
       { text: '读书收获', link: '/pages/b79286/' },
     ],
   },
+  { text: '历史足迹', link: '/archives/'},
   { text: '飞鸽传书', link: '/about/' }
 ]

@@ -1,6 +1,6 @@
 ---
 archivesPage: true
-title: 归档
+title: 历史足迹
 permalink: /archives/
 article: false
 ---
