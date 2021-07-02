@@ -1,6 +1,7 @@
 <template>
   <router-link
     class="nav-link"
+    :class="isfirsMenu ? 'firstMenu-link' : ''"
     :to="link"
     @focusout.native="focusoutAction"
     v-if="!isExternal(link)"
@@ -26,6 +27,9 @@ export default {
   props: {
     item: {
       required: true
+    },
+    isfirsMenu: {
+      default: false
     }
   },
 

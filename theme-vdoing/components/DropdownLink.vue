@@ -114,7 +114,6 @@ export default {
 
   watch: {
     $route () {
-      console.log("触发这个函数")
       this.open = false
     }
   }
@@ -246,9 +245,32 @@ export default {
       border-radius 0.25rem
       white-space nowrap
       margin 0
+  .nav-item .dropdown-title .link-title
+    &.router-link-active
+      margin-bottom -2px
+      border-bottom 2px solid var(--accent-color-l10)
+      color var(--accentColor)
+    &:after
+      content: "";
+      width: 0;
+      height: 2px;
+      background: var(--accent-color-l10);
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transition: all .4s;
+    &:hover:after{
+      left: 0%;
+      width: 100%;
+    }
+    &:active{
+      left: 0%;
+      width: 100%;
+    }
   .nav-item .dropdown-title a
-    &:hover, &.router-link-active
+    position: relative;
+    &:hover
       margin-bottom -2px
       // border-bottom 2px solid lighten($accentColor, 8%)
-      border-bottom 2px solid var(--accent-color-l10)
+      //border-bottom 2px solid var(--accent-color-l10)
 </style>
