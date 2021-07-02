@@ -188,6 +188,7 @@ export default {
       //border-bottom 2px solid var(--accent-color-l10)
     &.router-link-active
       margin-bottom -2px
+      color var(--accentColor)
       // border-bottom 2px solid lighten($accentColor, 8%)
       border-bottom 2px solid var(--accent-color-l10)
 </style>
