@@ -57,9 +57,9 @@ module.exports = {
   },
   blogger: {
     // 博主信息，显示在首页侧边栏
-    avatar: 'https://images.qipeilong.cn/promotion/20210318/f6a81203e7b8d6f635221f16c0183398_w960_h1280.jpeg',
+    avatar: 'https://cdn.jsdelivr.net/gh/MssText/learn@master/images/49203535.35emn5vryma0.png',
     name: 'masongsong',
-    slogan: '少壮不努力，老大徒伤悲',
+    slogan: '会当凌绝顶,一览众山小',
   },
   social: {
     // 社交图标，显示于博主信息栏和页脚栏

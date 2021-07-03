@@ -1,10 +1,11 @@
 <template>
   <aside class="blogger-wrapper card-box">
     <div class="avatar">
+      <div class="blogger-top"></div>
       <img
         :src="blogger.avatar"
         alt="头像"
-        title="我好看吗"
+        title="我是一名勇敢的船长"
       />
     </div>
     <div class="blogger">
@@ -43,6 +44,7 @@ export default {
 
 <style lang='stylus'>
 .blogger-wrapper
+  position relative
   height auto
   display inline-table
   padding-top 0!important
@@ -51,12 +53,24 @@ export default {
     width 100%
     // height 235px
     overflow hidden
+    .blogger-top
+      background url("https://cdn.jsdelivr.net/gh/MssText/learn@master/images/BrightonSnow_ZH-CN0309526170_1920x1080.58fhvngy1ww0.jpg")
+      background-size:100%,100%;
+      width 100%
+      height 120px
     @media (max-width 900px)
       // width 205px
       // height 205px
     img
-      width 100%
-      height 100%
+      position absolute
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin-left: -68px
+      border: 8px solid #fff;
+      border-radius: 50%;
+      top 50px
+      left 50%
   .icons
     // border 1px solid var(--borderColor)
     border-top none
@@ -73,7 +87,8 @@ export default {
       &:hover
         color var(--accentColor)
   .blogger
-    padding 0.3rem 0.95rem 0 0.95rem
+    margin 4rem 0 0.4rem 0
+    text-align center
     .name
       font-size 1.3rem
       display block
