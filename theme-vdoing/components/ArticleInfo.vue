@@ -98,7 +98,7 @@
           :id="$page.path"
           class="leancloud_visitors date iconfont icon-eye"
           :data-flag-title="$page.title">
-          <span class="post-meta-item-text">阅读 </span>
+          <span class="post-meta-item-text">阅读量 </span>
           <span class="leancloud-visitors-count">0</span>
         </div>
       </div>
@@ -239,7 +239,7 @@ export default {
           color #888
           &:hover
             text-decoration none
-        span 
+        span
           font-weight 500
         a.beLink
           &:hover
