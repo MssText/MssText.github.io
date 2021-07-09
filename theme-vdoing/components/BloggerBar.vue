@@ -71,9 +71,12 @@ export default {
       border-radius: 50%;
       top 50px
       left 50%
-      transition: all 0.8s;
       &:hover
-        transform rotate(360deg)
+        transform: rotate(666turn);
+        transition-property: all;
+        transition-duration: 59s;
+        transition-timing-function: cubic-bezier(.34,0,.84,1);
+        transition-delay: 1s;
   .icons
     // border 1px solid var(--borderColor)
     border-top none
