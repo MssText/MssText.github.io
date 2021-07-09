@@ -71,6 +71,9 @@ export default {
       border-radius: 50%;
       top 50px
       left 50%
+      transition: all 0.8s;
+      &:hover
+        transform rotate(360deg)
   .icons
     // border 1px solid var(--borderColor)
     border-top none
