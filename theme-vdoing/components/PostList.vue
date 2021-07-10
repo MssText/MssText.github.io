@@ -161,11 +161,18 @@ export default {
 <style lang='stylus'>
 .post-list
   margin-bottom 4rem
+  transition margin-right 0.3s ease-out
+  &:hover
+   margin-right 1.7rem
   .post
     position relative
     padding 1rem 1.5rem
-    margin-bottom 0.9rem
+    margin-bottom 1.2rem
     transition all 0.3s
+    border-radius 1.2rem
+    &:hover
+      transform scale(1.1)
+      z-index 19999
     &.post-leave-active
       display none
     &.post-enter

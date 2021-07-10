@@ -47,10 +47,7 @@ a,input,button
 .card-box // 卡片
   border-radius 5px
   background var(--mainBg)
-  box-shadow 0 1px 2px 0 rgba(0,0,0,.1)
-  transition box-shadow .5s
-  &:hover
-    box-shadow 0 1px 15px 0 rgba(0,0,0,.1)
+  box-shadow: 6px 6px 12px var(--theme-bg-shadow), -6px -6px 12px var(--theme-bg-high);
 
 .blur // 模糊滤镜
   backdrop-filter saturate(200%) blur(20px)

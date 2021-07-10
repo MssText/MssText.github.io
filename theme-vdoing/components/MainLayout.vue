@@ -35,6 +35,7 @@
       margin 0 0 0.9rem 0.9rem
       padding-top 0.95rem
       padding-bottom 0.95rem
+      border-radius 1.2rem
 // 719px以下
 @media (max-width $MQMobile)
   .main-wrapper
