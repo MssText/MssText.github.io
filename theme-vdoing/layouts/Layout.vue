@@ -75,7 +75,7 @@
       /> -->
     </Page>
 
-    <Footer />
+    <Footer v-if="showLicense" />
 
     <Buttons
       ref="buttons"
@@ -131,10 +131,15 @@ export default {
       themeMode: 'light',
       themeColor: 'green',
       showWindowLB: true,
-      showWindowRB: true
+      showWindowRB: true,
+      // showLicense: false
     }
   },
   computed: {
+    showLicense() {
+      const { frontmatter } = this.$page
+      return !!frontmatter.home
+    },
     sidebarSlotTop() {
       return this.getHtmlStr('sidebarT')
     },

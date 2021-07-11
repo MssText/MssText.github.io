@@ -1,20 +1,27 @@
 <template>
   <div class="theme-vdoing-content">
-    <div class="column-wrapper">
-      <img :src="$withBase(pageData.imgUrl)" />
-      <dl class="column-info">
-        <dt class="title">{{pageData.title}}</dt>
-        <dd
-          class="description"
-          v-html="pageData.description"
-        ></dd>
-      </dl>
-    </div>
+<!--    <div class="column-wrapper">-->
+<!--      <img :src="$withBase(pageData.imgUrl)" />-->
+<!--      <dl class="column-info">-->
+<!--        <dt class="title">{{pageData.title}}</dt>-->
+<!--        <dd-->
+<!--          class="description"-->
+<!--          v-html="pageData.description"-->
+<!--        ></dd>-->
+<!--      </dl>-->
+<!--    </div>-->
+<!--    <section class="catalogue-card-box">-->
+<!--      <div class="card-cover"></div>-->
+<!--      <div class="card-text">-->
+<!--        <h1 class="card-text-title">{{ pageData.title }}</h1>-->
+<!--        <p v-html="pageData.description"></p>-->
+<!--      </div>-->
+<!--    </section>-->
+    <CatalogueCardBox :pageData="pageData" />
     <div
       class="catalogue-wrapper"
       v-if="isStructuring"
     >
-      <div class="catalogue-title">目录</div>
       <div class="catalogue-content">
         <template v-for="(item, index) in getCatalogueList()">
           <dl
@@ -82,7 +89,11 @@
 </template>
 
 <script>
+import CatalogueCardBox from "@theme/components/CatalogueCardBox";
 export default {
+  components: {
+    CatalogueCardBox
+  },
   data () {
     return {
       pageData: null,
@@ -153,9 +164,7 @@ dl, dd
       opacity 0.8
       margin 0.5rem 0
 .catalogue-wrapper
-  .catalogue-title
-    font-size 1.45rem
-    margin 2rem 0
+  margin 2rem 0
   .catalogue-content
     dl
       margin-bottom 1.8rem
@@ -173,6 +182,7 @@ dl, dd
           padding-top $navbarHeight
       dt
         font-size 1.1rem
+        font-weight bold
         &:hover .header-anchor
           opacity 1
       dd
