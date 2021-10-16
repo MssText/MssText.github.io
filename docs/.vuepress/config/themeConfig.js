@@ -58,8 +58,8 @@ module.exports = {
   blogger: {
     // 博主信息，显示在首页侧边栏
     avatar: 'https://cdn.jsdelivr.net/gh/MssText/learn@master/images/49203535.35emn5vryma0.png',
-    name: 'masongsong',
-    slogan: '会当凌绝顶,一览众山小',
+    name: 'captain',
+    slogan: '心之所向，海的彼岸',
   },
   social: {
     // 社交图标，显示于博主信息栏和页脚栏
