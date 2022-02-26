@@ -20,6 +20,6 @@ module.exports = [
   //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
   //   },
   // ], // 网站关联Google AdSense 与 html格式广告支持
-  ['script', { src: 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js' }],
+  ['script', { src: 'https://lib.baomitu.com/vue/2.6.12/vue.min.js' }],
   ['script', { src: 'https://unpkg.com/mssui@0.1.17/lib/index.js' }]
 ]
