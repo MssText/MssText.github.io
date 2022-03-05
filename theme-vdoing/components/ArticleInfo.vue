@@ -138,9 +138,10 @@ export default {
         const valine = new valineConstructor.default();
         valine.init({
           el: '#valine-vuepress-comment',
-          appId: 'FBPq14pAqbA2njMQCgq0Qtn9-MdYXbMMI',
-          appKey: 'AeKIQrwR7e1lljXJ4yAnv6yH',
+          appId: 'tDUGbN6vdLQi0kHYYU3VkC8W-MdYXbMMI',
+          appKey: 'C3XWY1leeFjQYycvOrny2FT9',
           path: this.$route.path,
+          serverURLs: 'https://tDUGbN6v.api.lncldglobal.com',
           visitor: true,
         })
       })
