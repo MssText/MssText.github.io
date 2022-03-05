@@ -22,8 +22,8 @@
               title="作者"
               class="iconfont icon-touxiang"
               target="_blank"
-              v-if="item.author && item.author.href"
-              :href="item.author.href"
+              v-if="item.author && item.author.link"
+              :href="item.author.link"
             >{{ item.author.name ? item.author.name : item.author }}</a>
             <span
               title="作者"
@@ -107,9 +107,6 @@ export default {
   created () {
     this.setPosts()
   },
-  mounted () {
-    // this.postListOffsetTop = this.getElementToPageTop(this.$refs.postList) - 240
-  },
   watch: {
     currentPage () {
       if (this.$route.query.p != this.currentPage) { // 此判断防止添加相同的路由信息（如浏览器回退时触发的）
@@ -120,9 +117,6 @@ export default {
           }
         })
       }
-      // setTimeout(() => {
-      //   window.scrollTo({ top: this.postListOffsetTop }) // behavior: 'smooth'
-      // },0)
       this.setPosts()
     },
     category () {
@@ -148,12 +142,6 @@ export default {
 
       this.sortPosts = posts.slice((currentPage - 1) * perPage, currentPage * perPage)
     },
-    // getElementToPageTop(el) {
-    //   if(el && el.parentElement) {
-    //     return this.getElementToPageTop(el.parentElement) + el.offsetTop
-    //   }
-    //   return el.offsetTop
-    // }
   }
 }
 </script>
@@ -172,7 +160,6 @@ export default {
     border-radius 1.2rem
     &:hover
       transform scale(1.1)
-      z-index 19999
     &.post-leave-active
       display none
     &.post-enter
