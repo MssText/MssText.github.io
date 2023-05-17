@@ -10,14 +10,14 @@ module.exports = [
         text: '原生能力',
         items: [
           { text: 'JavaScript', link: '/pages/98424b/' },
-          { text: 'Node', link: '/pages/04a264/' }
+          // { text: 'Node', link: '/pages/04a264/' }
         ],
       },
       {
         text: '框架能力',
         items: [
           { text: 'Vue', link: '/pages/235d3a/' },
-          { text: 'React', link: '/pages/58cdc3/' },
+          // { text: 'React', link: '/pages/58cdc3/' },
         ],
       },
       {
@@ -33,17 +33,17 @@ module.exports = [
     text: '页面杂谈',
     link: '/ui/',
     items: [
-      { text: 'HTML', link: '/pages/1403bc/' },
-      { text: 'CSS', link: '/pages/6d9467/' },
+      // { text: 'HTML', link: '/pages/1403bc/' },
+      // { text: 'CSS', link: '/pages/6d9467/' },
     ],
   },
   {
     text: '书房百味',
     link: '/read/',
     items: [
-      { text: '最近在读', link: '/pages/511ed7/' },
-      { text: '奇思妙想', link: '/pages/44e592/' },
-      { text: '读书收获', link: '/pages/b79286/' },
+      // { text: '最近在读', link: '/pages/511ed7/' },
+      // { text: '奇思妙想', link: '/pages/44e592/' },
+      // { text: '读书收获', link: '/pages/b79286/' },
     ],
   },
   { text: '历史足迹', link: '/archives/'},
